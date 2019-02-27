@@ -26,13 +26,13 @@ int r, c, l, h;
 char a[MAX_SIZE][MAX_SIZE];
 vector<Rect> rects[MAX_SIZE][MAX_SIZE];
 vector<Rect> answer;
+string fileName, inputFileName, outputFileName;
 
 #include "partialSums.cpp"
 #include "findBestRects.cpp"
 #include "find_optimal_slices.cpp"
 
 int main() {
-	string fileName, inputFileName, outputFileName;
 	for (int fileIndex = 0; fileIndex < FILES_COUNT; fileIndex++) {
 		fileName = FILE_NAMES[fileIndex];
 		inputFileName = fileName + ".in";
