@@ -25,6 +25,7 @@ vector<Rect> answer;
 
 #include "partialSums.cpp"
 #include "findBestRects.cpp"
+#include "find_optimal_slices.cpp"
 
 int main() {
 	ifstream inf("a_example.in");
@@ -39,6 +40,7 @@ int main() {
 
 	calcSum();
 	findBestRects();
+	findOptimalSlices();
 
 	ofstream outf("output.txt");
 	outf << answer.size();
