@@ -17,7 +17,7 @@ void findBestRects() {
 				currentRect = Rect(x, y, x + maxWidth - 1, y + height - 1);
 				rectangleContent = sumRect(currentRect);
 				if (rectangleContent.first >= l && rectangleContent.second >= l) {
-					rects[x][y].push_back(currentRect);
+					rects[y][x].push_back(currentRect);
 				}
 				prevMaxWidth = maxWidth;
 			}
