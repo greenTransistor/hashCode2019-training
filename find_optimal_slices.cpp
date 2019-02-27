@@ -56,7 +56,7 @@ vector <Rect> randomSlices() {
 int cellsCount(vector <Rect> rs) {
 	int s = 0;
 	for (auto r : rs) {
-		s += (r.x1 - r.x0) * (r.y1 - r.y0);
+		s += (r.x1 - r.x0 + 1) * (r.y1 - r.y0 + 1);
 	}
 	return s;
 }
@@ -64,6 +64,9 @@ int cellsCount(vector <Rect> rs) {
 void findOptimalSlices() {
 	int mxC = 0;
 	for (int i = 0; i < ATTEMPTS_COUNT; i++) {
+		if (i % 100 == 0) {
+			cout << "File " << fileName << ", attempt " << i << "\n";
+		}
 		vector <Rect> curR = randomSlices();
 		int curC = cellsCount(curR);
 		if (curC > mxC) {
