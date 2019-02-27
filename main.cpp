@@ -8,7 +8,13 @@ const int MAX_SIZE = 1001;
 const int ATTEMPTS_COUNT = 10;
 
 struct Rect {
-	int x0, x1, y0, y1;
+	int x0, y0, x1, y1;
+	Rect(x0, y0, x1, y1) {
+		this->x0 = x0;
+		this->y0 = y0;
+		this->x1 = x1;
+		this->y1 = y1;
+	}
 };
 
 int r, c, l, h;
@@ -30,6 +36,7 @@ int main() {
 	}
 	inf.close();
 
+	calcSum();
 	findBestRects();
 
 	return 0;
