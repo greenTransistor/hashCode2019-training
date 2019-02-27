@@ -19,7 +19,7 @@ int fitPosition(int str, int stc) {
 	while (i < r && !used[str][i]) {
 		i++;
 	}
-	Rect rs = rects[str][stc];
+	vector <Rect> rs = rects[str][stc];
 	int j = 0;
 	while (j < rs.size() && rs[j].x1 < i) {
 		j++;
@@ -65,7 +65,7 @@ void findOptimalSlices() {
 	int mxC = 0;
 	for (int i = 0; i < ATTEMPTS_COUNT; i++) {
 		vector <Rect> curR = randomSlices();
-		int curC = cellsCount(curSl);
+		int curC = cellsCount(curR);
 		if (curC > mxC) {
 			mxC = curC;
 			answer = curR;
