@@ -5,7 +5,7 @@
 using namespace std;
 
 //Configurable, more = better result but worse performance (1000 for big is 65 seconds on Intel Core i5-7200U)
-const int ATTEMPTS_COUNT = 10;
+const int ATTEMPTS_COUNT = 100;
 
 const int FILES_COUNT = 4;
 const string FILE_NAMES[FILES_COUNT] = {"a_example", "b_small", "c_medium", "d_big"};
