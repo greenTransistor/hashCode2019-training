@@ -7,6 +7,7 @@ void findBestRects() {
 
 	for (int x = 0; x < c; x++) {
 		for (int y = 0; y < r; y++) {
+			rects[y][x].clear();
 			prevMaxWidth = 0;
 			for (int height = min(r - y, maxArea); height >= 1; height--) {
 				maxWidth = min(c - x, maxArea / height);
