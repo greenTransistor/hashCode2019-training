@@ -5,6 +5,7 @@
 using namespace std;
 
 const int MAX_SIZE = 1001;
+const int ATTEMPTS_COUNT = 10;
 
 struct Rect {
 	int x0, x1, y0, y1;
@@ -16,6 +17,7 @@ vector<Rect> rects[MAX_SIZE][MAX_SIZE];
 vector<Rect> answer;
 
 #include "partialSums.cpp"
+#include "findBestRects.cpp"
 
 int main() {
 	ifstream inf("a_example.in");
@@ -27,6 +29,8 @@ int main() {
 		inf >> a[i];
 	}
 	inf.close();
+
+	findBestRects();
 
 	return 0;
 }
