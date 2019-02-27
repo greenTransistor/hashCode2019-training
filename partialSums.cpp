@@ -40,10 +40,10 @@ void calcSum(){
 
 pair <int, int> sumRect(Rect r){
 	
-	int x0 = r.x0,
-		y0 = r.y0,
-		x1 = r.x1,
-		y1 = r.y1;
+	int x0 = r.y0,
+		y0 = r.x0,
+		x1 = r.y1,
+		y1 = r.x1;
 		
 	pair<int,int> rect0 = ((x0 > 0 && y0 > 0) ? partSums[x0-1][y0-1] : make_pair(0,0)),
 				  rect1 = (x0 > 0 ? partSums[x0-1][y1] : make_pair(0,0)),
