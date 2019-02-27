@@ -9,6 +9,7 @@ const int ATTEMPTS_COUNT = 10;
 
 struct Rect {
 	int x0, y0, x1, y1;
+	Rect() {}
 	Rect(int x0, int y0, int x1, int y1) {
 		this->x0 = x0;
 		this->y0 = y0;
