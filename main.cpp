@@ -43,7 +43,7 @@ int main() {
 	findOptimalSlices();
 
 	ofstream outf("output.txt");
-	outf << answer.size();
+	outf << answer.size() << "\n";
 	for (int i = 0; i < answer.size(); i++) {
 		outf << answer[i].x0 << " " << answer[i].y0 << " " << answer[i].x1 << " " << answer[i].y1 << "\n";
 	}
