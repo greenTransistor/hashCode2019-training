@@ -30,7 +30,7 @@ void calcSum(){
 			
 	}
 	
-	for (int j = 0; j < r; j++)
+	for (int j = 0; j < c; j++)
 		partSums[0][j] = rowSums[0][j];
 	
 	for (int i = 1; i < r; i++)
