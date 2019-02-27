@@ -5,11 +5,11 @@ void findBestRects() {
 	pair<int, int> rectangleContent;
 	Rect currentRect;
 
-	for (int x = 0; x < r; x++) {
-		for (int y = 0; y < c; y++) {
+	for (int x = 0; x < c; x++) {
+		for (int y = 0; y < r; y++) {
 			prevMaxWidth = 0;
-			for (int height = min(c - y, maxArea); height >= 1; height--) {
-				maxWidth = min(r - x, maxArea / height);
+			for (int height = min(r - y, maxArea); height >= 1; height--) {
+				maxWidth = min(c - x, maxArea / height);
 				if (maxWidth == prevMaxWidth) {
 					continue;
 				}
